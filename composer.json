@@ -6,5 +6,10 @@
             "email": "91072840+paul5848-Dresden@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "paul_core\\paul_core\\": "."
+        }
+    }
 }
