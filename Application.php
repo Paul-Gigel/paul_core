@@ -8,8 +8,12 @@ use app\models\User;
 
 class Application
 {
-    public static string $ROOT_DIR;
+    const EVENT_BEFORE_REQUEST = 'beforeRequest';
+    const EVENT_AFTER_REQUEST = 'afterRequest';
 
+    protected array $eventListeners = [];
+
+    public static string $ROOT_DIR;
     public string $layout = 'main';
     public string $userClass;
     public Router $router;
@@ -46,18 +50,6 @@ class Application
     {
         return !self::$app->user;
     }
-    public function run()
-    {
-        try {
-            echo $this->router->resolve();
-        }catch (\Exception $e)   {
-            $this->response->setStatusCode($e->getCode());
-            echo $this->view->renderView('_error',[
-                'exception' => $e
-            ]);
-        }
-    }
-
     /**
      * @return Controller
      */
@@ -85,5 +77,28 @@ class Application
     {
         $this->user = null;
         $this->session->remove('user');
+    }
+    public function run()
+    {
+        $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
+        try {
+            echo $this->router->resolve();
+        }catch (\Exception $e)   {
+            $this->response->setStatusCode($e->getCode());
+            echo $this->view->renderView('_error',[
+                'exception' => $e
+            ]);
+        }
+    }
+    public function triggerEvent($eventName)
+    {
+        $callbacks = $this->eventListeners[$eventName] ?? [];
+        foreach ($callbacks as $callback) {
+            call_user_func($callback);
+        }
+    }
+    public function on($eventName, $callback)
+    {
+        $this->eventListeners[$eventName][] = $callback;
     }
 }
