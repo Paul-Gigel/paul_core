@@ -1,13 +1,13 @@
 <?php
 
-namespace app\core;
+namespace paul_core\paul_core;
 
 use app\controllers\AuthController;
 use app\controllers\SiteController;
-use app\core\exception\ForbiddenExeption;
-use app\core\exception\NotFoundException;
-use app\core\middlewares\AuthMiddleware;
-use app\core\middlewares\BaseMiddleware;
+use paul_core\paul_core\exception\ForbiddenExeption;
+use paul_core\paul_core\exception\NotFoundException;
+use paul_core\paul_core\middlewares\AuthMiddleware;
+use paul_core\paul_core\middlewares\BaseMiddleware;
 
 class Router
 {

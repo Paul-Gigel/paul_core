@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core\form;
+namespace paul_core\paul_core\form;
 
 class TextareaField extends BaseField
 {

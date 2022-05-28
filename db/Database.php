@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\db;
+namespace paul_core\paul_core\db;
 
-use app\core\Application;
+use paul_core\paul_core\Application;
 
 class Database
 {

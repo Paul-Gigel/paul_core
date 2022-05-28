@@ -1,5 +1,5 @@
 <?php
-namespace app\core\middlewares;
+namespace paul_core\paul_core\middlewares;
 
 abstract class BaseMiddleware
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\db;
-use app\core\Application;
-use app\core\Model;
+namespace paul_core\paul_core\db;
+use paul_core\paul_core\Application;
+use paul_core\paul_core\Model;
 
 abstract class DbModel extends Model
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\form;
+namespace paul_core\paul_core\form;
 
-use app\core\Model;
+use paul_core\paul_core\Model;
 
 class InputField extends BaseField
 {

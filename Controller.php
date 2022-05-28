@@ -1,15 +1,15 @@
 <?php
 
-namespace app\core;
+namespace paul_core\paul_core;
 
-use app\core\middlewares\BaseMiddleware;
+use paul_core\paul_core\middlewares\BaseMiddleware;
 
 class Controller
 {
     public string $layout = 'main';
     public string $action = '';
     /**
-     * @var \app\core\middlewares\BaseMiddleware[]
+     * @var \paul_core\paul_core\middlewares\BaseMiddleware[]
      */
     protected $middlewares = [];
 

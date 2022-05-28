@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace paul_core\paul_core;
 
 class Session
 {

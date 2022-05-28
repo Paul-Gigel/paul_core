@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core;
+namespace paul_core\paul_core;
 
-use app\core\db\Database;
-use app\core\db\DbModel;
+use paul_core\paul_core\db\Database;
+use paul_core\paul_core\db\DbModel;
 use app\models\User;
 
 class Application
