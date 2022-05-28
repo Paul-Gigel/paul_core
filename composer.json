@@ -1,0 +1,10 @@
+{
+    "name": "paul_core/paul_core",
+    "authors": [
+        {
+            "name": "Paul Gigel",
+            "email": "91072840+paul5848-Dresden@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
